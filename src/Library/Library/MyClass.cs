@@ -36,7 +36,7 @@ namespace Library
         public static int CountInRandomString(char c)
         {
             Random r = new Random();
-            int length = r.Next();
+            int length = r.Next(100);
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             string randomString = new string(Enumerable.Repeat(chars, length)
                 .Select(s => s[r.Next(s.Length)]).ToArray());
